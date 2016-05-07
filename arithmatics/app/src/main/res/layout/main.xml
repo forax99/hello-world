@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+	android:orientation="vertical"
+	android:gravity="center"
+>
+
+    <TextView
+        android:text="@string/math_game"
+		android:textSize="40sp"
+		android:layout_marginBottom="10dp"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+	<Button
+		android:id="@+id/start"
+		android:text="@string/start"
+		android:onClick="startArithmatics"
+		android:layout_marginBottom="10dp"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:id="@+id/game_layout">
+
+		<TextView
+			android:text=""
+			android:id="@+id/arg1"
+			android:textSize="40sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text="+"
+			android:textSize="40sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text=""
+			android:id="@+id/arg2"
+			android:textSize="40sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text="="
+			android:textSize="40sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text=""
+			android:textSize="40sp"
+			android:id="@+id/answer"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/check"
+		android:text="@string/check"
+		android:onClick="checkAnswer"
+		android:enabled="false"
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingTop="10dp"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:id="@+id/result_layout">
+
+		<TextView
+			android:text=""
+			android:id="@+id/right_count"
+			android:textSize="20sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text=""
+			android:id="@+id/show_point"
+			android:textSize="20sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView
+			android:text=""
+			android:id="@+id/show_level"
+			android:textSize="20sp"
+			android:paddingRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+	</LinearLayout>	
+
+	<LinearLayout 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_marginTop="3pt" 
+		android:layout_marginLeft="5pt" 
+		android:layout_marginRight="5pt"> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="7" 
+			 
+			android:id="@+id/seven"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="8" 
+			 
+			android:id="@+id/eight"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="9" 
+			 
+			android:id="@+id/nine"> 
+		</Button> 
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_marginTop="3pt" 
+		android:layout_marginLeft="5pt" 
+		android:layout_marginRight="5pt"> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="4" 
+			 
+			android:id="@+id/four"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="5" 
+			 
+			android:id="@+id/five"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="6" 
+			 
+			android:id="@+id/six"> 
+		</Button> 
+	</LinearLayout>
+	<LinearLayout 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_marginTop="3pt" 
+		android:layout_marginLeft="5pt" 
+		android:layout_marginRight="5pt"> 
+		<Button 
+		    style="@style/keypad_button"
+			android:text="1" 
+			 
+			android:id="@+id/one"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button" 
+			android:text="2"  
+			android:id="@+id/two"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="3"
+			android:id="@+id/three"> 
+		</Button> 
+	</LinearLayout>
+	<LinearLayout 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:layout_marginTop="3pt" 
+		android:layout_marginLeft="5pt" 
+		android:layout_marginRight="5pt"> 
+		<Button 
+			style="@style/keypad_button"
+		    android:text="0" 
+			android:id="@+id/zero"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="="  
+			android:id="@+id/enter"> 
+		</Button> 
+		<Button 
+			style="@style/keypad_button"
+			android:text="C"  
+			android:id="@+id/clear"> 
+		</Button> 
+	</LinearLayout>
+
+</LinearLayout>
